@@ -19,6 +19,7 @@
       <thead>
         <tr>
           <th>#</th>
+          <th>Categoria</th>
           <th>Nome</th>
           <th>Email</th>
           <th>Mensagem</th>
@@ -28,6 +29,7 @@
         @foreach($contatos as $row)
         <tr>
           <th scope="row">{{ $row->id }}</th>
+          <td>{{ $row->categoria->nome }}</td>
           <td>{{ $row->nome }}</td>
           <td>{{ $row->email }}</td>
           <td>{{ $row->mensagem }}</td>

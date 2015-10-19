@@ -24,6 +24,7 @@ class ContatoController extends Controller
 		$contato->nome = $request->get('nome');
 		$contato->email = $request->get('email');
 		$contato->mensagem = $request->get('mensagem');
+		$contato->categoria_id = $request->get('categoria_id');
 
 		$contato->save();
 
