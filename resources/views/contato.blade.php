@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ContactMe</title>
+@extends('app')
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-</head>
-<body>
-
-<div class="container">
+@section('conteudo')
 
     <h1>ContactMe</h1>
 
     <hr />
-
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     <form action="/enviar" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -55,11 +36,8 @@
             <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Digite sua mensagem"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-default">Enviar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
 
     </form>
 
-</div>
-
-</body>
-</html>
+@endsection

@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ContactMe</title>
+@extends('app')
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+@section('conteudo')
 
-</head>
-<body>
-
-<div class="container">
-
-    <h1>ContactMe</h1>
+    <h1>Login</h1>
 
     <hr />
-
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -71,7 +52,4 @@
         </div>
     </div>
 
-</div>
-
-</body>
-</html>
+@endsection

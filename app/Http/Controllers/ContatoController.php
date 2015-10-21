@@ -13,7 +13,7 @@ class ContatoController extends Controller
      * Exibe o formulário para enviar uma mensagem
      */
     public function index(){
-    	return view('welcome');
+    	return view('contato');
     }
 
 	/**
